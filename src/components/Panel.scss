@@ -1,0 +1,29 @@
+.panel-header {
+  display: flex;
+  align-items: center;
+  background-color: #4aa3a3;
+  padding: 0.3rem;
+  border: 1px solid #1d2f2f;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px 2px #3a5f5f;
+  font-family: Russo One;
+  font-size: 1.5rem;
+  color: black;
+  margin-bottom: 10px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.panel-header-icon {
+  font-size: 16px;
+  margin-right: 10px;
+  
+}
+
+.wrap {
+  margin: 1.125rem auto;
+  border: 1px solid #1d2f2f;
+  border-radius: 5px;
+  padding: 0.3rem;
+  background-color: #c0d8d8;
+}

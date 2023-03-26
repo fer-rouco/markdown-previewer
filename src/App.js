@@ -1,23 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import { connect, Provider } from 'react-redux';
+import { createStore } from 'redux';
+import './App.scss';
+import { Editor } from './components/Editor';
+import { Previewer } from './components/Previewer';
+
+const TEXT = 'TEXT';
+
+const updateText = (text) => {
+  return {
+    type: TEXT,
+    text
+  }
+};
+
+const textReducer = (state = '', action) => {
+  switch (action.type) {
+    case TEXT:
+      return [
+        action.text
+      ];
+    default:
+      return state;
+  }
+};
+
+// React-Redux:
+const mapStateToProps = (state) => {
+  return { text: state }
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    submitNewText: (newText) => {
+       dispatch(updateText(newText))
+    }
+  }
+};
+
+const ConnectedPreviewer = connect(mapStateToProps, null)(Previewer);
+const ConnectedEditor = connect(null, mapDispatchToProps)(Editor);
+const store = createStore(textReducer);
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Provider store={store}>
+        <ConnectedEditor></ConnectedEditor>
+        <ConnectedPreviewer></ConnectedPreviewer>
+      </Provider>
     </div>
   );
 }
