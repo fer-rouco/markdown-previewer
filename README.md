@@ -12,6 +12,7 @@ Available live [here](https://fernet87.github.io/markdown-previewer/)
 
 This is a React based app to Build the Markdown Previewer for [freeCodeCamp](https://www.freecodecamp.org/learn/front-end-development-libraries/front-end-development-libraries-projects/build-a-markdown-previewer) Front End Development Libraries project.
 In this app you have an editing panel in which you can write your markdown code and it will be interpreted and shown in a preview panel.
+
 Read more about [Markdown](https://en.wikipedia.org/wiki/Markdown)
 
 ## **Technologies used for this project.**
