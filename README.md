@@ -2,7 +2,7 @@
 
 > App edit and previsualize your markdowns
 
-Available live [here](https://fernet87.github.io/markdown-previewer/) 
+Available live [here](https://fer-rouco.github.io/markdown-previewer/) 
 
 ## About the Project
 
